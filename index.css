@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    /* ### Primary */
+
+--Strong-cyan: hsl(172, 67%, 45%);
+
+/* ### Neutral */
+
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+
+
+
+/* ### Body Copy */
+
+--Font-size-form-inputs: 24px;
+--font-family-spacemono: 'Space Mono', monospace;
+
+}
+  .attribution { font-size: 11px; text-align: center; display: none;}
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    font-family: var(--font-family-spacemono);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    min-width: fit-content;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-grayish-cyan);
+}
+
+header{
+    padding: 3rem;
+}
+main {
+    width: 925px;
+    height: 500px;
+    display: flex;
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-radius:25px ;
+}
+.input-container {
+    width: 50%;
+    padding: 1rem;
+    padding-right: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .input-fields {
+        position: relative;
+    }
+    .input-fields i {
+        position: absolute;
+        bottom: 25px;
+        left: 10px;
+        color: var(--Grayish-cyan);
+    }
+input{
+    width: 100%;
+    height: 3rem;
+    font-size: var(--Font-size-form-inputs);
+    color: var(--Very-dark-cyan);
+    border: 0px;
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: right;
+    margin-block:10px ;
+    border-radius: 5px;
+}
+input:focus {
+    outline:2px solid var(--Strong-cyan)
+}
+
+label {
+    color: var(--Dark-grayish-cyan);
+    font-weight: 300;
+}
+span{
+    float:right;
+    color: red;
+    font-size: 12px;
+}
+.btn-line{
+    display: flex;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+.tip-btn {
+    color: var(--White);
+    background-color: var(--Very-dark-cyan);
+    width: 100%;
+    height: 3rem;
+    border:0px;
+    border-radius: 5px;
+    font-size: var(--Font-size-form-inputs);
+}
+
+.tip-btn:hover {
+    cursor: pointer;
+    background-color: hsla(172, 67%, 45%,0.8);
+}
+.custom {
+    background-color:var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    margin: 0;
+}
+.custom:hover {
+    background-color:var(--Very-light-grayish-cyan);
+    cursor: text;
+}
+::placeholder {
+    text-align: center;
+}
+
+/* Tip amount , total  and reset button container named as display container  */
+.display-container {
+    width: 50%;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    padding: 2rem;
+}
+    .display-container >div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .amount {
+        color:white;
+
+    }
+    .per-person{
+        color:var(--Grayish-cyan);
+        font-size: 12px;
+    }
+    .tip {
+        color: var(--Strong-cyan);
+        font-size: 50px;
+    }
+
+.reset-btn {
+    width: 100%;
+    height: 3rem;
+    border: 0px;
+    border-radius: 5px;
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    margin-top: 7rem;
+    font-size: var(--Font-size-form-inputs);
+    background-color: var(--Strong-cyan);
+}
+.reset-btn:hover{
+   background-color:  hsl(172, 59%, 70%);
+}
+
+@media  screen and (max-width:600px) {
+    body{
+        height: fit-content;
+    }
+
+    main {
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+        .input-container{
+            width: 100%;
+            padding: 0;
+            gap: 1rem;
+        }
+            input{
+                font-size: 1rem;
+                height: auto;
+                padding: 0.55rem;
+            }
+            label {
+                font-size: 14px;
+            }
+            .tip-btn{
+                font-size: 1rem;
+                height: auto;
+                padding: 0.55rem;
+            }
+
+        .display-container {
+            width: 100%;
+            padding: 1rem;
+            padding-top: 2rem;
+            margin-top: 1rem;
+        }
+            .amount{
+                font-size: 14px;
+            }
+            .per-person{
+                font-size: 10px;
+            }
+            .tip {
+                font-size: 35px;
+            }
+            .reset-btn {
+                font-size: 1rem;
+                height: auto;
+                padding: 0.55rem;
+                margin-top: 1rem;
+            }
+
+}
