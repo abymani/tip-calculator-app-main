@@ -22,7 +22,7 @@
 --font-family-spacemono: 'Space Mono', monospace;
 
 }
-  .attribution { font-size: 11px; text-align: center; display: none;}
+  .attribution { font-size: 11px; text-align: center;}
   .attribution a { color: hsl(228, 45%, 44%); }
 
 *{
