@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     // form validation
     $("input").keydown(function (e) {
-        if ((e.which < 48 || e.which > 57) && (e.which !== 8) && (e.which !== 0) ) {        
+        if ((e.which < 48 || e.which > 57 ) && (e.which !== 8) && (e.which !== 0) && (e.which <96 || e.which > 105)) {        
            return false;
         }
         return true;
@@ -64,8 +64,8 @@ $(document).ready(function(){
     const bil = $("#bill").val();
     const persons = $("#persons").val();   
     if(bil && persons){
-        let tipAmount= bil *tip /100;
-        let total = bil - tipAmount;
+        let tipAmount= (bil *tip /100)/persons;
+        let total = Math.round((bil/persons) - tipAmount) ;
         console.log(tipAmount);
         $("#tip-amount").text(`$${tipAmount}`);
         $("#total").text(`$${total}`);
